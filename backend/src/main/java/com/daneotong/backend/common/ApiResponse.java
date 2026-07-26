@@ -11,11 +11,19 @@ public class ApiResponse<T> {
     private String message;
     private T data;
 
+    public static <T> ApiResponse<T> of(ResponseCode code) {
+        return new ApiResponse<>(code.getCode(), code.getMessage(), null);
+    }
+
     public static <T> ApiResponse<T> of(ResponseCode code, T data) {
         return new ApiResponse<>(code.getCode(), code.getMessage(), data);
     }
 
     public static <T> ApiResponse<T> of(ResponseCode code, String message, T data) {
         return new ApiResponse<>(code.getCode(), message, data);
+    }
+
+    public static <T> ApiResponse<T> of(DaneotongException e) {
+        return of(e.getResponseCode(), e.getMessage(), null);
     }
 }
