@@ -5,4 +5,5 @@
 - [00-기획.md](00-기획.md)
 - [01-db-spring-boot-setup.md](01-db-spring-boot-setup.md)
 - [02-api-response-structure.md](02-api-response-structure.md)
-- [03-exception-handling.md](03-exception-handling.md) — 진행 중
+- [03-exception-handling.md](03-exception-handling.md) — 완료
+- [04-card-create-api.md](04-card-create-api.md) — 코드 완료, 테스트 아직
