@@ -2,12 +2,12 @@ package com.daneotong.backend.card;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 /**
  * 단어 카드 엔티티
@@ -19,16 +19,16 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Card {
+public class Cards {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private UUID id;
 
     private String expression;
     private String meaning;
 
-    private Long userId;
+    private UUID userId;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

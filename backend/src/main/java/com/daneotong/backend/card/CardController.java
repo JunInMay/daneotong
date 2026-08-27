@@ -21,9 +21,9 @@ public class CardController {
     public ApiResponse<CreateCardResponse> createCard(
             @RequestBody CreateCardRequest request) {
 
-        Card card = request.toEntity();
+        Cards cards = request.toEntity();
 
         return ApiResponse.of(ResponseCode.SUCCESS
-                , cardService.createCard(card));
+                , cardService.createCard(cards));
     }
 }

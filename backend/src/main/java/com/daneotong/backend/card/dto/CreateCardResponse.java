@@ -1,11 +1,12 @@
 package com.daneotong.backend.card.dto;
 
-import com.daneotong.backend.card.Card;
+import com.daneotong.backend.card.Cards;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
-public record CreateCardResponse(Long id, String expression, String meaning, LocalDateTime createdAt) {
-    public static CreateCardResponse from(Card card) {
-        return new CreateCardResponse(card.getId(), card.getExpression(), card.getMeaning(), card.getCreatedAt());
+public record CreateCardResponse(UUID id, String expression, String meaning, LocalDateTime createdAt) {
+    public static CreateCardResponse from(Cards cards) {
+        return new CreateCardResponse(cards.getId(), cards.getExpression(), cards.getMeaning(), cards.getCreatedAt());
     }
 }
